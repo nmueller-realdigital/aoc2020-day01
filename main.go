@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"sort"
 
 	"github.com/nmueller-realdigital/aoc2020-day01/aoc"
 )
@@ -23,6 +24,7 @@ func run() error {
 	if err != nil {
 		return err
 	}
+	sort.Ints(data)
 	x, y := aoc.FindPair(data)
 	fmt.Println(x, y, x*y)
 	a, b, c := aoc.FindTriple(data)

@@ -1,7 +1,14 @@
 // Package aoc implements business logic and utility functions for Advent of Code challenges.
 package aoc
 
-import "testing"
+import (
+	"sort"
+	"testing"
+)
+
+func init() {
+	sort.Ints(fixture)
+}
 
 func TestFindPair(t *testing.T) {
 	want1, want2 := 1632, 388
